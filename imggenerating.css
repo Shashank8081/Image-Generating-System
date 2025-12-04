@@ -1,0 +1,124 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-block: 40px;
+}
+
+header {
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
+}
+
+header h1 {
+    color: blueviolet;
+}
+
+header form .search-container{
+    margin-top: 20px;
+    position: relative;
+}
+
+header form .search-container input {
+    width: 100%;
+    font-size: 18px;
+    padding: 12px 24px;
+    border-radius: 20px;
+    border: none;
+    background-color: silver;
+}
+
+header form .search-container .material-symbols-outlined{
+    position: absolute;
+    right: 10px;
+    bottom: 12px;
+    color: slategray;
+    cursor: pointer;
+}
+header form .search-container .material-symbols-outlined:hover{
+background-color:thistle;
+}
+
+.image-container {
+    margin-block: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.image-container img {
+    width: 300px;
+    height: 200px;
+}
+
+.image-container .imageDiv {
+    position: relative;
+}
+
+.imageDiv .overlay {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    transition: height 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 20px;
+    color: aliceblue;
+}
+
+.imageDiv:hover .overlay {
+    height: 100%;
+}
+
+.loadMoreBtn {
+    border: none;
+    background-color: blue;
+    color: aliceblue;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    display:none;
+}
+
+main section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0 50px 0;
+}
+
+@media screen and (max-width: 920px) {
+    header {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    header {
+        width: 90%;
+    }
+    .images-container img {
+        width: 100%;
+        height: auto;
+    }
+}
